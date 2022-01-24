@@ -24,6 +24,9 @@ const App = () => {
 
     if (!ethereum) {
       console.log("Make sure you have metamask!");
+      alert(
+        "You need to get a web3 wallet, e.g. MetaMask, in order to mint an NFT from this site. "
+      );
       return;
     } else {
       console.log("We have the ethereum object", ethereum);
@@ -233,15 +236,18 @@ const App = () => {
               {mintedNFT} of {maxNFT} NFTs minted.
             </p>
           )}
-          {maxNFT === 0 && maxNFT === 0 && isConnectedToWeb3 === true && (
-            <div className="sub-text">
-              <p className="sub-text inline">Fetching minting stats </p>
-              <div className="lds-ripple ">
-                <div></div>
-                <div></div>
+          {maxNFT === 0 &&
+            maxNFT === 0 &&
+            isConnectedToWeb3 === true &&
+            rinkeby && (
+              <div className="sub-text">
+                <p className="sub-text inline">Fetching minting stats </p>
+                <div className="lds-ripple ">
+                  <div></div>
+                  <div></div>
+                </div>
               </div>
-            </div>
-          )}
+            )}
           {currentAccount === "" ? (
             renderNotConnectedContainer()
           ) : (
