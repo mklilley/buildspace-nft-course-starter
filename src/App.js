@@ -17,6 +17,7 @@ const App = () => {
   const [maxNFT, setMaxNFT] = useState(0);
   const [mintedNFT, setMintedNFT] = useState(0);
   const [isMining, setIsMining] = useState(false);
+  const [isConnectedToWeb3, setIsConnectedToWeb3] = useState(false);
 
   const checkIfWalletIsConnected = async () => {
     const { ethereum } = window;
@@ -43,6 +44,7 @@ const App = () => {
     const accounts = await ethereum.request({ method: "eth_accounts" });
 
     if (accounts.length !== 0) {
+      setIsConnectedToWeb3(true);
       const account = accounts[0];
       console.log("Found an authorized account:", account);
       setCurrentAccount(account);
@@ -77,6 +79,7 @@ const App = () => {
       /*
        * Boom! This should print out public address once we authorize Metamask.
        */
+      setIsConnectedToWeb3(true);
       console.log("Connected", accounts[0]);
       setCurrentAccount(accounts[0]);
 
@@ -233,7 +236,7 @@ const App = () => {
               {mintedNFT} of {maxNFT} NFTs minted.
             </p>
           )}
-          {maxNFT === 0 && maxNFT === 0 && (
+          {maxNFT === 0 && maxNFT === 0 && isConnectedToWeb3 === true && (
             <div className="sub-text">
               <p className="sub-text inline">Fetching minting stats </p>
               <div className="lds-ripple ">
