@@ -9,7 +9,7 @@ const TWITTER_HANDLE = "mklilley";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = "";
 const TOTAL_MINT_COUNT = 50;
-const CONTRACT_ADDRESS = "0x28D7dFE0211Ec6fF9914BBB0C70e0de3b66eCD2B";
+const CONTRACT_ADDRESS = "0xD2CAaAb5eF6a9D0aC505c9772E965f9052dcACC8";
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
