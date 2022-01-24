@@ -221,7 +221,7 @@ const App = () => {
             Check out the collection on{" "}
             <a
               target="_blank"
-              href="https://testnets.opensea.io/collection/squarenft-yexoykjagv"
+              href="https://testnets.opensea.io/collection/squarenft-waknandpbt"
             >
               OpenSea
             </a>{" "}
