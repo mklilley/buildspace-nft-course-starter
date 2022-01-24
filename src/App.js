@@ -7,8 +7,8 @@ import { ethers } from "ethers";
 
 const TWITTER_HANDLE = "mklilley";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const OPENSEA_LINK = "";
-const TOTAL_MINT_COUNT = 50;
+const OPENSEA_LINK =
+  "https://testnets.opensea.io/collection/squarenft-waknandpbt";
 const CONTRACT_ADDRESS = "0xD2CAaAb5eF6a9D0aC505c9772E965f9052dcACC8";
 
 const App = () => {
@@ -222,10 +222,7 @@ const App = () => {
 
           <p className="sub-text">
             Check out the collection on{" "}
-            <a
-              target="_blank"
-              href="https://testnets.opensea.io/collection/squarenft-waknandpbt"
-            >
+            <a target="_blank" rel="noreferrer" href={OPENSEA_LINK}>
               OpenSea
             </a>{" "}
             (testnet)
